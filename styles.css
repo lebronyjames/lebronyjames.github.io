@@ -1,0 +1,152 @@
+/* ---------- Color Theme ---------- */
+
+:root {
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+
+    --secondary: #f8fafc;
+    --background: #eef2f7;
+
+    --text: #1f2937;
+    --text-light: #6b7280;
+
+    --white: #ffffff;
+
+    --border: #dbe4ee;
+
+    --shadow: 0 8px 25px rgba(0,0,0,.08);
+
+    --radius: 10px;
+}
+
+/* ---------- Reset ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--background);
+    color:var(--text);
+}
+
+/* ---------- Navigation ---------- */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:var(--white);
+
+    padding:18px 8%;
+
+    box-shadow:var(--shadow);
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:var(--primary);
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--text);
+
+    font-weight:500;
+
+    padding:10px 16px;
+
+    border-radius:8px;
+
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    background:var(--primary);
+    color:white;
+}
+
+.nav-links .active{
+    background:var(--primary);
+    color:white;
+}
+
+/* ---------- Main ---------- */
+
+.container{
+    max-width:1000px;
+    margin:80px auto;
+    padding:0 25px;
+}
+
+.container h1{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.container p{
+    color:var(--text-light);
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+/* ---------- Button ---------- */
+
+.btn{
+    background:var(--primary);
+    color:white;
+
+    border:none;
+
+    padding:14px 28px;
+
+    font-size:16px;
+    font-weight:600;
+
+    border-radius:var(--radius);
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.btn:hover{
+    background:var(--primary-hover);
+    transform:translateY(-2px);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+    }
+
+    .container h1{
+        font-size:32px;
+    }
+}
